@@ -211,6 +211,7 @@ body .student-cards .student-card .card-content .buttons .see-students-btn {
 body .searching {
   margin-top: 60px;
   margin-bottom: 60px;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -220,27 +221,27 @@ body .searching input {
   width: 100%;
 }
 body .searching input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.4666666667);
+  color: #fff;
   font-weight: 600;
 }
 body .searching input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.4666666667);
+  color: #fff;
   font-weight: 600;
 }
 body .searching input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.4666666667);
+  color: #fff;
   font-weight: 600;
 }
 body .searching input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.4666666667);
+  color: #fff;
   font-weight: 600;
 }
 body .searching input::placeholder {
-  color: rgba(255, 255, 255, 0.4666666667);
+  color: #fff;
   font-weight: 600;
 }
 body .searching .search-input {
-  background-color: rgb(12, 12, 74);
+  background-color: gray;
   color: #fff;
   font-weight: 600;
   outline: none;
