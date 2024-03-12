@@ -28,6 +28,7 @@ function getStudentRow({
   email,
   field,
   isWork,
+  birthDay,
   id,
 }) {
   return `
@@ -147,13 +148,14 @@ async function getStudents() {
     }
 
     studentsRow.innerHTML = "";
+    console.log(students);
 
     students.map((student) => {
-        studentsRow.innerHTML += getTeacherRow(student);
+      studentsRow.innerHTML += getStudentRow(student);
     });
 
-    const editStudentBtns = document.querySelector(".edit-student-btn");
-    const deleteStudentBtns = document.querySelector(".delete-student-btn");
+    const editStudentBtns = document.querySelectorAll(".edit-student-btn");
+    const deleteStudentBtns = document.querySelectorAll(".delete-student-btn");
 
     editStudentBtns.forEach((editBtn) => {
       editBtn.addEventListener("click", async function () {
@@ -185,6 +187,7 @@ async function getStudents() {
       });
     });
   } catch (err) {
+    console.log(err);
     studentsRow.innerHTML = err?.response?.data;
   }
 }
@@ -192,6 +195,7 @@ async function getStudents() {
 searchInput.addEventListener("keyup", function () {
   search = this.value;
   getStudents();
+  console.log(students);
 });
 
 filterSelect.addEventListener("change", function () {

@@ -142,7 +142,7 @@ body {
           display: grid;
           grid-template-columns: auto auto;
           gap: 10px;
-          .edit-teacher-btn {
+          .edit-student-btn {
             border: none;
             font-size: 16px;
             color: #fff;
@@ -152,7 +152,7 @@ body {
             cursor: pointer;
             transition: all 0.3s ease;
           }
-          .delete-teacher-btn {
+          .delete-student-btn {
             border: none;
             font-size: 16px;
             color: #fff;
@@ -161,19 +161,6 @@ body {
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
-          }
-          .see-students-btn {
-            border: none;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            color: #fff;
-            padding: 8px 16px;
-            background-color: #4070f4;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            grid-column: 1/3;
           }
         }
       }

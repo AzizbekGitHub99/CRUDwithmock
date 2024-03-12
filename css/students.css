@@ -172,7 +172,7 @@ body .student-cards .student-card .card-content .buttons {
   grid-template-columns: auto auto;
   gap: 10px;
 }
-body .student-cards .student-card .card-content .buttons .edit-teacher-btn {
+body .student-cards .student-card .card-content .buttons .edit-student-btn {
   border: none;
   font-size: 16px;
   color: #fff;
@@ -183,7 +183,7 @@ body .student-cards .student-card .card-content .buttons .edit-teacher-btn {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-body .student-cards .student-card .card-content .buttons .delete-teacher-btn {
+body .student-cards .student-card .card-content .buttons .delete-student-btn {
   border: none;
   font-size: 16px;
   color: #fff;
@@ -193,20 +193,6 @@ body .student-cards .student-card .card-content .buttons .delete-teacher-btn {
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-body .student-cards .student-card .card-content .buttons .see-students-btn {
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  color: #fff;
-  padding: 8px 16px;
-  background-color: #4070f4;
-  border-radius: 6px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  grid-column: 1/3;
 }
 body .searching {
   margin-top: 60px;
