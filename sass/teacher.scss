@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  header {
+    position: fixed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #4070f4;
+    box-shadow: #fff 0px 1px 10px;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    .headers-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 80px;
+      }
+      .inputs {
+        max-width: 400px;
+        select:first-child {
+          max-width: 200px;
+        }
+        .teacher-select,
+        .marry-select {
+          background-color: seagreen;
+          color: #fff;
+          outline: none;
+          border: none;
+        }
+        .add-btn {
+          background-color: dodgerblue;
+          border: none;
+          min-width: 120px;
+        }
+      }
+    }
+  }
+  .teacher-cards {
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    @media (min-width: 632px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1240px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .teacher-card {
+      border-radius: 25px;
+      background-color: #fff;
+      min-width: 300px;
+      .image-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+        position: relative;
+        row-gap: 5px;
+        padding: 25px 0;
+        .card-image {
+          position: relative;
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+          background: #fff;
+          padding: 3px;
+          .card-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #4070f4;
+          }
+        }
+        .overlay {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background-color: #4070f4;
+          border-radius: 25px 25px 0 25px;
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+            height: 40px;
+            width: 40px;
+            border-radius: 0 25px 0 0;
+            background-color: #fff;
+            z-index: 1;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            bottom: -40px;
+            height: 40px;
+            width: 40px;
+            background-color: #4070f4;
+          }
+        }
+      }
+      .card-content {
+        border-end-end-radius: 10px;
+        position: relative;
+        border-end-start-radius: 10px;
+        padding: 30px 20px 20px 20px;
+        background-color: #fff;
+
+        .name {
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          color: #333;
+        }
+        // .students-info {
+        // }
+        .buttons {
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 10px;
+          .edit-teacher-btn {
+            border: none;
+            font-size: 16px;
+            color: #fff;
+            padding: 8px 16px;
+            background-color: orange;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          .delete-teacher-btn {
+            border: none;
+            font-size: 16px;
+            color: #fff;
+            padding: 8px 16px;
+            background-color: crimson;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          .see-students-btn {
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            color: #fff;
+            padding: 8px 16px;
+            background-color: #4070f4;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            grid-column: 1/3;
+          }
+        }
+      }
+    }
+  }
+
+  .searching {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    align-items: center;
+    input {
+      max-width: 400px;
+      width: 100%;
+      &::placeholder {
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+    .search-input {
+      background-color: gray;
+      color: #fff;
+      font-weight: 600;
+      outline: none;
+      border: none;
+    }
+  }
+
+  .pagination {
+    margin-top: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    li {
+      .page-link {
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        background-color: burlywood;
+        &:hover {
+          background-color: rgb(23, 23, 150);
+        }
+      }
+    }
+    .disabled {
+      .page-link {
+        color: gray;
+      }
+    }
+    .active {
+      .page-link {
+        background-color: dodgerblue;
+      }
+    }
+  }
+}
