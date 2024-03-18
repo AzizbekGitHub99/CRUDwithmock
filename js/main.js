@@ -53,7 +53,7 @@ function getTeacherRow({
                     <button teacherId="${id}" data-bs-toggle="modal"
                     data-bs-target="#teacher" class="edit-teacher-btn">Edit</button>
                     <button teacherId="${id}" class="delete-teacher-btn">Delete</button>
-                    <a href="/students.html?id=${id}" teacherId="${id}" class="see-students-btn">See students</a>
+                    <a href="/students.html?teacherId=${id}" teacherId="${id}" class="see-students-btn">See students</a>
                 </div>
             </div>
         </div>

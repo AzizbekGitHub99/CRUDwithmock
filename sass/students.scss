@@ -24,8 +24,10 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      img {
-        width: 80px;
+      a{
+        img {
+          width: 80px;
+        }
       }
       .inputs {
         max-width: 400px;

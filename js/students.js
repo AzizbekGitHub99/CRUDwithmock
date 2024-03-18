@@ -9,8 +9,7 @@ const studentForm = document.querySelector(".student-form");
 const studentModal = document.querySelector("#student");
 
 const query = new URLSearchParams(location.search);
-let teacherId = query.get("id") || +localStorage.getItem("teacherId");
-localStorage.setItem("teacherId", teacherId);
+let teacherId = query.get("teacherId")
 
 console.log(teacherId);
 
@@ -75,6 +74,7 @@ async function getStudents() {
       limit: LIMIT,
       sortBy: filterField,
       order,
+      teacherId,
       isWork,
     };
 
