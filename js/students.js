@@ -30,6 +30,7 @@ function getStudentRow({
   birthDay,
   id,
 }) {
+  console.log(birthDay);
   return `
             <div class="student-card">
                 <div class="image-content">
@@ -47,10 +48,13 @@ function getStudentRow({
                         <b>Phone:</b> ${phoneNumber}
                     </p>
                     <p class="info">
-                        <b>Is working:</b> - ${isWork ? "Yes" : "No"}
+                        <b>Field:</b> ${field}
                     </p>
                     <p class="info">
-                        <b>Field:</b> ${field}
+                        <b>Birthday:</b> ${birthDay.slice(0,10)}
+                    </p>
+                    <p class="info">
+                        <b>Is working:</b> - ${isWork ? "Yes" : "No"}
                     </p>
                     <div class="buttons">
                         <button studentId="${id}" data-bs-toggle="modal"
@@ -168,6 +172,7 @@ async function getStudents() {
         studentForm.elements.avatar.value = student.avatar;
         studentForm.elements.phoneNumber.value = student.phoneNumber;
         studentForm.elements.field.value = student.field;
+        studentForm.elements.birthDay.value = student.birthDay;
         studentForm.elements.email.value = student.email;
         studentForm.elements.isWork.checked = student.isWork;
       });
@@ -224,6 +229,7 @@ studentForm.addEventListener("submit", async function (e) {
       isWork: this.elements.isWork.checked,
       phoneNumber: this.elements.phoneNumber.value,
       field: this.elements.field.value,
+      birthDay: this.elements.birthDay.value,
       email: this.elements.email.value,
     };
     if (selected === null) {
